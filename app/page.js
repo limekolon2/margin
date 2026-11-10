@@ -6,6 +6,7 @@ import ConcreteTexture from "./components/ConcreteTexture";
 import LightBeam from "./components/LightBeam";
 import SacredObjects from "./components/SacredObjects";
 import ProgressIndicator from "./components/ProgressIndicator";
+import QuitButton from "./components/QuitButton";
 
 /**
  * 『余白 (MARGIN)』
@@ -165,6 +166,34 @@ export default function MarginSpace() {
 
       {/* 進捗インジケーター */}
       <ProgressIndicator noiseLevel={noiseLevel} />
+
+      {/* やめてポータルに戻る — ノイズに負けないよう最前面に、ただし静かに */}
+      <div className="absolute top-6 left-6 z-[70]">
+        <QuitButton
+          note="この庭は保存されません。次に開くと、またノイズから始まります。"
+          theme={{
+            panel: "#e4e1dc",
+            text: "#3a3835",
+            sub: "#77736d",
+            border: "rgba(0,0,0,0.12)",
+            accent: "#3a3835",
+            accentText: "#e4e1dc",
+            font: "var(--font-noto-jp), 'Noto Sans JP', sans-serif",
+            radius: 2,
+          }}
+          style={{
+            background: "rgba(200,196,190,0.6)",
+            color: "#77736d",
+            border: "1px solid rgba(0,0,0,0.1)",
+            borderRadius: 2,
+            padding: "6px 12px",
+            fontSize: 10,
+            letterSpacing: "0.3em",
+            cursor: "pointer",
+            fontFamily: "var(--font-noto-jp), 'Noto Sans JP', sans-serif",
+          }}
+        />
+      </div>
 
       {/* 操作ヒント — 初期状態でのみ表示 */}
       <div
