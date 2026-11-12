@@ -16,7 +16,7 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata = {
   title: "余白 — MARGIN",
   description:
-    "デジタル枯山水。過剰なノイズを削ぎ落とし、究極の均衡を鑑賞する引き算のシミュレーション。",
+    "視界を埋めるノイズを、指先のスクロールで少しずつ削ぎ落としていく。スコアも、クリアもなく、ただ永続する静寂を追い求める。",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
